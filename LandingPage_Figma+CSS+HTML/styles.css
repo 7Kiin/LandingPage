@@ -1,0 +1,126 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(to right,#9796F0,#FBC7D4);
+    min-height: 100vh;
+}
+
+.container{
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.wave{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+}
+.contenedor-textos{
+    flex-basis: 50%;
+    padding-left: 40px;
+    overflow: hidden;
+    color: #fff;
+}
+.titulo{
+    font-size: 50px;
+    font-weight: bold;
+}
+.subtitulo{
+    font-size: 22px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+.cta{
+    display: inline-block;
+    width: 200px;
+    padding: 22px 50px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #fff;
+    border-radius: 12px;
+}
+a{
+    color: #9796F0;
+    text-decoration: none;
+}
+.contenedor-img{
+    flex-basis: 50%;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    overflow: hidden;
+}
+.smartphone{
+    animation: ilustrationAnimate ease-in 1s infinite alternate;
+}
+
+@keyframes ilustrationAnimate{
+    0%{
+        transform: scale(1);
+    } 100%{
+        transform: scale(1.04);
+    }
+}
+
+@media (max-width: 700px){
+    .container{
+        flex-direction: column-reverse;
+    }
+    .wave{
+        width: 70%;
+        top:-100px;
+    }
+    .contenedor-textos{
+        display: flex;
+        padding-left: 100px;
+        padding-right: 100px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 40%;
+        text-align: center;
+    }
+    .titulo{
+        font-size: 40px;
+    }
+    .subtitulo{
+        font-size: 20px;
+    }
+    .contenedor-img{
+        flex-basis: 60%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .smartphone{
+        height: 90%;
+    }
+}
+
+@media (max-width: 500px){
+    .wave{
+        width: auto;
+        height: 45%;
+    }
+    .contenedor-textos{
+        flex-basis: 40%;
+        justify-content: flex-start;
+    }
+    .titulo{
+        font-size: 35px;
+    }
+    .container{
+        height: 800px;
+    }
+}
